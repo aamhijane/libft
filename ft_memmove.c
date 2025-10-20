@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayamhija <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 17:46:57 by ayamhija          #+#    #+#             */
-/*   Updated: 2025/10/18 19:28:17 by ayamhija         ###   ########.fr       */
+/*   Created: 2025/10/17 20:17:16 by ayamhija          #+#    #+#             */
+/*   Updated: 2025/10/18 19:46:55 by ayamhija         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include "libft.h"
 
-#define LIBFT_H
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+  char *ds = (char *)dest;
+  const char *sr = (const char *)src;
+  size_t i;
 
-#include <stddef.h>
+  if (ds < sr)
+  {
+    for (i = 0; i < n; i++)
+      ds[i] = sr[i];
+  }
+  else if (ds > sr)
+  {
+    for (i = n; i-- > 0; )
+      ds[i] = sr[i];
+  }
 
-void    ft_bzero(void *s, size_t n);
-void    *ft_memset(void *s, int c, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-size_t  ft_strlen(char *str);
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isdigit(int n);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-
-#endif
+  return dest;
+}
