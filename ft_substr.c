@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_ft_substr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayamhija <ayamhija@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 14:34:26 by ayamhija          #+#    #+#             */
-/*   Updated: 2025/10/30 14:48:36 by ayamhija         ###   ########.fr       */
+/*   Created: 2025/10/30 14:57:08 by ayamhija          #+#    #+#             */
+/*   Updated: 2025/10/30 14:57:38 by ayamhija         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t i;
-	size_t len;
-	char *dup;
+	size_t total_size;
+	char *str;
 
-	len = ft_strlen((char *)s) + 1;
+	total_size = len + 1;
 
-	dup = malloc(len);
-	if (dup == NULL)
+	str = malloc(len);
+	if (str == NULL)
 		return NULL;
 
-	for (i = 0; s[i] != '\0'; i++)
-		dup[i] = s[i];
+	i = 0;
+	while (len > i && s[i])
+	{
+		str[i] = s[start + i];
+		i++;
+	}
 
-	dup[i] = '\0';
+	str[i] = '\0';
 
-	return dup;
+	return str;
 }
