@@ -6,7 +6,7 @@
 /*   By: ayamhija <ayamhija@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 17:18:49 by ayamhija          #+#    #+#             */
-/*   Updated: 2025/11/01 17:20:56 by ayamhija         ###   ########.fr       */
+/*   Updated: 2025/11/02 18:42:16 by ayamhija         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	return (ft_strlen((char *)src));
+	return (ft_strlen(src));
 }
