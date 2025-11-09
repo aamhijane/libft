@@ -58,6 +58,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 
 #endif
