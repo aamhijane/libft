@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-static char	f(unsigned int i, char c)
-{
-	return (c + i);
-}
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*buffer;

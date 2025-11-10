@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayamhija <ayamhija@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 22:31:22 by ayamhija          #+#    #+#             */
-/*   Updated: 2025/11/09 22:32:08 by ayamhija         ###   ########.fr       */
+/*   Created: 2025/11/09 20:06:30 by ayamhija          #+#    #+#             */
+/*   Updated: 2025/11/09 20:07:15 by ayamhija         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	f(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	char	*str;
-
-	str = (char *)content;
-	if (str && str[0] != '\0')
-	{
-		str[0] = 'X';
-	}
-}
-
-void	ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	if (!lst || !f)
+	if (!lst || !del)
 		return ;
-	while (lst != NULL)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
+	del(lst->content);
+	free(lst);
 }

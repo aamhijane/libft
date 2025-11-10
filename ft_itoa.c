@@ -58,7 +58,6 @@ char	*ft_itoa(int n)
 	size_t		digits_count;
 	int			sign;
 	long int	value;
-	char		*buffer;
 
 	digits_count = count_digits_in_number(n);
 	sign = 1;
