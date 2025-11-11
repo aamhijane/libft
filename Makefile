@@ -14,7 +14,7 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 AR_LIB = ar
-AR_LIB_FLAGS = rc
+AR_LIB_FLAGS = rcs
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
