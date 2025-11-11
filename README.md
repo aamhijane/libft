@@ -31,7 +31,7 @@ Working on libft was challenging but rewarding. Understanding each function in d
 4. Link your programs with the compiled library using `-L.` and `-lft` flags during compilation.
 
 ```sh
-git clone https://github.com/yourusername/libft.git
+git clone https://github.com/aamhijane/libft.git
 cd libft
 make
 gcc your_program.c -L. -lft -o your_program
