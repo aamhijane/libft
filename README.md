@@ -19,30 +19,6 @@ libft is the foundational C library project of the 42 School curriculum. The pro
 - The discipline of rigorous code review, testing, and style adherence.
 - How foundational C functions work internally, which builds confidence for more complex projects ahead.
 
-## My Experience
-
-Working on libft was challenging but rewarding. Understanding each function in depth required thorough research and iterative testing. I gained valuable insight into memory safety, pointer arithmetic, and handling special cases like overlapping memory with `memmove`. Peer feedback and automated tests helped refine my code quality. This project laid a solid foundation for subsequent 42 projects and real-world C programming.
-
-## How to Use
-
-1. Clone the repository.
-2. Run `make` in the project directory to compile the static library `libft.a`.
-3. Include `libft.h` in your source files to use the library functions.
-4. Link your programs with the compiled library using `-L.` and `-lft` flags during compilation.
-
-```sh
-git clone https://github.com/aamhijane/libft.git
-cd libft
-make
-gcc your_program.c -L. -lft -o your_program
-```
-
-## Project Structure
-
-- `libft.h`  Header file with all function prototypes.
-- `srcs/`  Source files implementing your functions.
-- `Makefile`  Build automation to compile the library and clean object files.
-
 ## Bonus
 
 Additional linked list functions to practice dynamic data structure management are included as a bonus part of the project.
